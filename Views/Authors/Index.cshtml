@@ -1,0 +1,41 @@
+﻿@model IEnumerable<EF_core_empty_controler__Day_3_.Models.Author>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                        <th>
+                @Html.DisplayNameFor(model => model.authid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.authname)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.authid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.authname)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.authid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.authid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.authid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

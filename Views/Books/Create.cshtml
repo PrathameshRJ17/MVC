@@ -1,0 +1,47 @@
+﻿@model EF_core_empty_controler__Day_3_.Models.Book
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Book</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="title" class="control-label"></label>
+                <input asp-for="title" class="form-control" />
+                <span asp-validation-for="title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="price" class="control-label"></label>
+                <input asp-for="price" class="form-control" />
+                <span asp-validation-for="price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Publicationyear" class="control-label"></label>
+                <input asp-for="Publicationyear" type="date" class="form-control" />
+                <span asp-validation-for="Publicationyear" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="authid" class="control-label">Author Names</label>
+                <select asp-for="authid" class ="form-control" asp-items="ViewBag.authid"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,79 @@
+############################
+# Visual Studio / Build
+############################
+.vs/
+.vscode/
+bin/
+obj/
+out/
+Debug/
+Release/
+x64/
+x86/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+############################
+# Rider / JetBrains
+############################
+.idea/
+*.iml
+
+############################
+# NuGet
+############################
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+############################
+# Entity Framework
+############################
+Migrations/
+
+############################
+# Logs
+############################
+*.log
+logs/
+*.tlog
+
+############################
+# Temporary files
+############################
+*.tmp
+*.bak
+*.swp
+*.dbmdl
+*.jfm
+
+############################
+# ASP.NET Core
+############################
+# Exclude secrets and settings
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+appsettings.*.json
+secrets.json
+
+# Local DB files
+*.mdf
+*.ldf
+
+############################
+# Others
+############################
+node_modules/
+dist/
+publish/
+wwwroot/lib/
